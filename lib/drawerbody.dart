@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:site/ProductDesc/checkout.dart';
 
 class DrawerBody extends StatelessWidget {
   const DrawerBody({Key? key}) : super(key: key);
@@ -32,6 +33,23 @@ class DrawerBody extends StatelessWidget {
                     Icon(Icons.menu,),
                     SizedBox(width: 30),
                     Text("Categories",style:TextStyle(color: Colors.black,fontSize: 20),),
+                  ],
+                ),
+              ),
+            ),
+                        Padding(
+              padding: const EdgeInsets.symmetric(vertical: 20),
+              child: GestureDetector(
+                onTap: () {
+                 
+                },
+                child: Row(
+                  children: [
+                    Icon(Icons.favorite,),
+                    SizedBox(width: 30),
+                    GestureDetector(
+                      onTap: () => Navigator.push(context,MaterialPageRoute(builder: (context)=>CheckOut(),) ),
+                      child: Text("Orders",style:TextStyle(color: Colors.black,fontSize: 20),)),
                   ],
                 ),
               ),

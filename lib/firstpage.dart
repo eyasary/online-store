@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:site/Connect/signin.dart';
 import 'package:site/freshfruits.dart';
 import 'package:site/fruitcard.dart';
 import 'package:site/list.dart';
@@ -9,9 +11,15 @@ import 'Interface.dart';
 import 'drawerbody.dart';
 
 
-class FirstPage extends StatelessWidget {
+class FirstPage extends StatefulWidget {
   const FirstPage({Key? key}) : super(key: key);
 
+  @override
+  State<FirstPage> createState() => _FirstPageState();
+}
+
+class _FirstPageState extends State<FirstPage> {
+  final _auth=FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +29,12 @@ class FirstPage extends StatelessWidget {
         actions: [
           Padding(
             padding: EdgeInsets.only(right: 20),
-            child: Icon(Icons.logout,color:Colors.black ),
+            child: GestureDetector(
+              onTap: () { 
+                _auth.signOut();
+                Navigator.pop(context); 
+                },
+              child: Icon(Icons.logout,color:Colors.black )),
           )
         ],
         backgroundColor: Colors.transparent,

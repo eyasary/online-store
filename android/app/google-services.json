@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "128586613307",
+    "project_id": "organicshop-8cc9b",
+    "storage_bucket": "organicshop-8cc9b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:128586613307:android:c08c42bb4a35392300121e",
+        "android_client_info": {
+          "package_name": "com.example.site"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "128586613307-3moam6ee0tte7ilk98k07esm8hitk3gr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCEQdsywflebMF6tqF0oBa3C13Dgy8aBJQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "128586613307-3moam6ee0tte7ilk98k07esm8hitk3gr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

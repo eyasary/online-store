@@ -11,38 +11,40 @@ class AddToCard extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          margin: EdgeInsets.only(right:20),
-          width: MediaQuery.of(context).size.width/5,
-          height: MediaQuery.of(context).size.height/15,
+          margin: EdgeInsets.only(right: 20),
+          width: MediaQuery.of(context).size.width / 5,
+          height: MediaQuery.of(context).size.height / 15,
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(18),
-            border:Border.all(
-              color: Colors.grey,
-            )
-        
+              borderRadius: BorderRadius.circular(18),
+              border: Border.all(
+                color: Colors.grey,
+              )),
+          child: Icon(
+            Icons.add_shopping_cart_outlined,
+            color: Colors.grey[400],
           ),
-          child: Icon(Icons.add_shopping_cart_outlined,color: Colors.grey[400],),
-         ),
-           Expanded(
-            child: SizedBox(
-              height: MediaQuery.of(context).size.height/15,
-              child: FlatButton(
+        ),
+        Expanded(
+          child: SizedBox(
+            height: MediaQuery.of(context).size.height / 15,
+            child: TextButton(
+              style: TextButton.styleFrom(
+                backgroundColor: Colors.grey,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(18)),
-                color: Colors.grey,
-                onPressed: () =>null,
-                child: Text(
-                  "Buy Now".toUpperCase(),
-                  style: TextStyle(
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
+              ),
+              onPressed: () => null,
+              child: Text(
+                "Buy Now".toUpperCase(),
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
               ),
             ),
           ),
-         
+        ),
       ],
     );
   }

@@ -20,3 +20,6 @@ List<Fruit> l2=[
   Fruit("images/rabbit.png", "Rabbit", 1.0, ""),
   Fruit("images/Pumpkin.png", "Pumpkin",1.6,"")
 ];
+List<Fruit> listcart=[
+  
+];
